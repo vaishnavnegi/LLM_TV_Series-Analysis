@@ -44,7 +44,9 @@ class NamedEntityRecognizer:
 
         # load dataset 
         df = load_subtitles_dataset(dataset_path)
-
+        # df = df.head(10)
+        # Will process the whole df in collab, here just first 10 episodes for testing.
+        
         # Run Inference
         df['ners'] = df['script'].apply(self.get_ners_inference)
 
