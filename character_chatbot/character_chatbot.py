@@ -22,14 +22,14 @@ class CharacterChatBot():
 
     def __init__(self,
                  model_path,
-                 data_path="/content/data/naruto.csv",
+                 data_path="/content/data/naruto.csv", # Colab path to data 
                  huggingface_token = None
                  ):
         
         self.model_path = model_path
         self.data_path = data_path
         self.huggingface_token = huggingface_token
-        self.base_model_path = "meta-llama/Meta-Llama-3-8B-Instruct"
+        self.base_model_path = "meta-llama/Llama-3.1-8B-Instruct"
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         if self.huggingface_token is not None:
